@@ -1,0 +1,155 @@
+#header {
+  .navbar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px 45px 30px;
+  }
+  //logo
+  .logo {
+    text-align: center;
+    padding: 40px 0px;
+    img {
+      width: 93px;
+      height: 23px;
+    }
+  }
+  //button navbar mobile
+  .navbar-brand {
+    display: none;
+    img {
+      width: 93px;
+      height: 23px;
+    }
+  }
+  .navbar-toggler {
+
+  }
+  //cart
+  .cart {
+    color: #000;
+    .ion-md-basket {
+      font-size: 20px;
+      padding-right: 6px;
+    }
+    .cart-box {
+      position: relative;
+      padding-bottom: 1px;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        background-color: #000;
+        transition: transform .4s cubic-bezier(.28,.38,0,.81);
+        width: 100%;
+        @include transform(scaleX(0));
+        @include transform-origin((100% 0%));
+      }
+      &:hover{
+        &:before {
+          @include transform(scaleX(1));
+          @include transform-origin((0 0));
+        }
+      }
+    }
+  }
+  //link menu ul li
+  .navbar-nav {
+    li {
+      a {
+        position: relative;
+        padding: 0px;
+        margin: 0px 20px;
+        color: #000;
+        padding-bottom: 1px;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: #000;
+          transition: transform .4s cubic-bezier(.28,.38,0,.81);
+          width: 100%;
+          @include transform(scaleX(0));
+          @include transform-origin((100% 0%));
+        }
+        &:hover{
+          &:before {
+            @include transform(scaleX(1));
+            @include transform-origin((0 0));
+          }
+        }
+      }
+    }
+    li.active {
+      a {
+        &:before {
+          @include transform(scaleX(1));
+          @include transform-origin((0 0));
+        }
+      }
+    }
+  }
+  //search & quick view harmbuger menu
+  .nav-right {
+    @include flex;
+    align-items: center;
+    .search {
+      cursor: pointer;
+      margin-right: 20px;
+      padding-bottom: 1px;
+      span {
+        position: relative;
+        margin-left: 2px;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          background-color: #000;
+          transition: transform .4s cubic-bezier(.28,.38,0,.81);
+          width: 100%;
+          @include transform(scaleX(0));
+          @include transform-origin((100% 0%));
+        }
+        &:hover{
+          &:before {
+            @include transform(scaleX(1));
+            @include transform-origin((0 0));
+          }
+        }
+      }
+    }
+    .btn-quickinfo {
+      cursor: pointer;
+      .one{
+        background-color: #000;
+        height: 4px;
+        margin: 4px 0px;
+        @include border-radius(4px);
+        @include transition(all 0.4s);
+        width: 35px;
+      }
+      .two{
+        @extend .one;
+        width: 20px;
+      }
+      .three{
+        @extend .one;
+        width: 27px;
+      }
+      &:hover{
+        .two{
+          width: 35px;
+        }
+        .three{
+          width: 35px;
+        }
+      }
+    }
+  }
+}

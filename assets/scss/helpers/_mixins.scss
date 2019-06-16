@@ -1,0 +1,283 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+------------------------------------------------------------- */
+
+////
+/// @author Matthieu Aussaguel
+/// @group sass-css3-mixins
+////
+
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property} : #{$value};
+  -moz-#{$property}   : #{$value};
+  -ms-#{$property}    : #{$value};
+  -o-#{$property}     : #{$value};
+  #{$property}        : #{$value};
+}
+
+/// Background Gradient
+/// @param {Color} $startColor [#3C3C3C] - Start Color
+/// @param {Color} $endColor [#999999] - End Color
+
+@mixin background-gradient($startColor: #3c3c3c, $endColor: #999) {
+  background-color: $startColor;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor);
+  background-image: -ms-linear-gradient(top, $startColor, $endColor);
+  background-image: -o-linear-gradient(top, $startColor, $endColor);
+  background-image: linear-gradient(top, $startColor, $endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+/// Background Radial
+/// @param {Color} $startColor [#3C3C3C] - Start Color
+/// @param {Percentage} $startPos [0%] - Start position
+/// @param {Color} $endColor [#999999] - End Color
+/// @param {Percentage} $endPos [100%] - End position
+
+@mixin background-radial($startColor: #fff, $startPos: 0%, $endColor: #000, $endPos:100%) {
+  background: -moz-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos, $startColor), color-stop($endPos, $endColor));
+  background: -webkit-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: -o-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: -ms-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: radial-gradient(ellipse at center, $startColor $startPos, $endColor $endPos);
+}
+
+/// Background Size
+/// @param {Size} $width [100%] - Width
+/// @param {Size} $width [$width] - Height
+/// @require {mixin} css3-prefix
+
+@mixin background-size($width: 100%, $height: $width) {
+  @if type-of($width) == 'number' and $height != null {
+    @include css3-prefix('background-size', $width $height);
+  } @else {
+    @include css3-prefix('background-size', $width);
+  }
+}
+
+/// Border Radius
+/// @param {Size} $radius [5px] - Radius
+/// @require {mixin} css3-prefix
+
+@mixin border-radius($radius: 5px) {
+  @include css3-prefix('border-radius', $radius);
+}
+
+/// Border Radius Separate
+/// @param {Size} $topLeftRadius [5px] - Top Left
+/// @param {Size} $topRightRadius [5px] - Top Right
+/// @param {Size} $bottomLeftRadius [5px] - Bottom Left
+/// @param {Size} $bottomRightRadius [5px] - Bottom Right
+
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+  -webkit-border-top-left-radius: $topLeftRadius;
+  -webkit-border-top-right-radius: $topRightRadius;
+  -webkit-border-bottom-right-radius: $bottomRightRadius;
+  -webkit-border-bottom-left-radius: $bottomLeftRadius;
+
+  -moz-border-radius-topleft: $topLeftRadius;
+  -moz-border-radius-topright: $topRightRadius;
+  -moz-border-radius-bottomright: $bottomRightRadius;
+  -moz-border-radius-bottomleft: $bottomLeftRadius;
+
+  border-top-left-radius: $topLeftRadius;
+  border-top-right-radius: $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius: $bottomLeftRadius;
+}
+
+/// Box Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [5px] - Blur
+/// @param {Color} $color [rgba(0,0,0,.4)] - Color
+/// @param {Boolean} $inset - Inset
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 8px, $color: rgba(0,0,0,.7), $inset: "") {
+  @if ($inset != "") {
+    @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+  } @else {
+    @include css3-prefix('box-shadow', $x $y $blur $color);
+  }
+}
+
+/// Box Sizing
+/// @param {*} $type [border-box] - Type
+/// @require {mixin} css3-prefix
+
+@mixin box-sizing($type: border-box) {
+  @include css3-prefix('box-sizing', $type);
+}
+
+/// Text Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [2px] - Blur
+/// @param {Color} $color [rgba(0,0,0,.4)] - Color
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+  text-shadow: $x $y $blur $color;
+}
+
+/// Transform
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+
+@mixin transform($params) {
+  @include css3-prefix('transform', $params);
+}
+
+/// Transform-Origin
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+
+@mixin transform-origin($params) {
+  @include css3-prefix('transform-origin', $params);
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+/// @require {mixin} css3-prefix
+
+@mixin transition($properties...) {
+
+  @if length($properties) >= 1 {
+    @include css3-prefix('transition', $properties);
+  } @else {
+    @include css3-prefix('transition', "all 0.2s ease-in-out 0s");
+  }
+}
+
+/// Keyframes
+/// @param {*} $animation-name - Animation name
+/// @content [Animation css]
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/// Animation
+/// @param {*} $str - name duration timing-function delay iteration-count direction fill-mode play-state ([http://www.w3schools.com/cssref/css3_pr_animation.asp](http://www.w3schools.com/cssref/css3_pr_animation.asp))
+/// @require {mixin} css3-prefix
+
+@mixin animation($str) {
+  @include css3-prefix('animation', $str);
+}
+
+/// Absolute center inside an element
+
+@mixin center-inside-element() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include css3-prefix('transform', 'translate(-50%, -50%)');
+}
+
+/// Media-query Breakpoints
+
+@mixin bp-ip4 {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin bp-ip6 {
+  @media only screen and (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin bp-ip6-plus {
+  @media only screen and (min-width: 376px) and (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-vertical {
+  @media only screen and (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-sm {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-md {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-lg {
+  @media only screen and (min-width: 1367px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-ultra {
+  @media only screen and (min-width: 1441px) {
+    @content;
+  }
+}
+
+/// Center vertical align the content inside an element
+/// @param {Height} $height - px
+@mixin box-center-valign-content($height) {
+  height: $height;
+  line-height: $height;
+  display: block;
+}
+
+/// Placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+  &:-moz-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin flex() {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
