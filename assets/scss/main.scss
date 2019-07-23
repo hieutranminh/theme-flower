@@ -4,6 +4,9 @@
 // Always include variable 1st !
 @import "helpers/mixins";
 
+// Animation
+@import "helpers/animation";
+
 // Base
 @import "base/typography";
 
@@ -20,7 +23,6 @@
 @import "layout/footer";
 
 // Components
-@import "components/nav";
 @import "components/forms";
 @import "components/popup";
 @import "components/pagination";

@@ -2,7 +2,19 @@ html, body {
   font-size: 16px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  @media #{$info-desktop} {
+    font-size: 15px;
+  }
+  @media #{$info-tablet} {
+    font-size: 14px;
+  }
 }
 .wrapper {
   padding: 0px 45px;
+  @media #{$info-desktop} {
+    padding: 0px 30px;
+  }
+  @media #{$info-phone} {
+    padding: 0px 15px;
+  }
 }

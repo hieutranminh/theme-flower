@@ -15,12 +15,15 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!--bootstrap-->
-  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
   <!--ion icons-->
-  <link rel="stylesheet" href="assets/css/vendor/ionicons.min.css">
+  <link rel="stylesheet" href="./assets/css/vendor/ionicons.min.css">
+  <!--slick carousel-->
+  <link rel="stylesheet" href="./assets/css/vendor/slick.css">
+  <link rel="stylesheet" href="./assets/css/vendor/slick-theme.css">
   <!--google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
 
@@ -32,22 +35,26 @@
   </div>
   <!--navigation-->
   <nav class="navbar navbar-expand-lg wrapper">
-    <!--button nav toggler mobile-->
+    <!--Logo in mobile-->
     <a class="navbar-brand" href="#">
       <img src="./assets/images/logo-dark.png" alt="logo">
     </a>
+    <!--button nav toggler mobile-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">
+        <span class="hamburger"></span>
+      </span>
     </button>
-    <!--Links menu-->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <a href="#" class="cart">
+      <!--Cart menu-->
+      <a href="#" class="navbar-cart">
         <i class="ion ion-md-basket"></i>
         <span class="cart-box">
           <span class="quantity">1 /</span>
           <span class="sum-price">200.000đ</span>
         </span>
       </a>
+      <!--Link menu-->
       <ul class="navbar-nav m-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home</a>
@@ -66,7 +73,7 @@
         </li>
       </ul>
       <!--Search & button hambuger information quick view-->
-      <div class="nav-right">
+      <div class="navbar-right">
         <div class="search">
           <i class="ion ion-md-search"></i>
           <span>Search</span>
@@ -80,11 +87,194 @@
     </div>
   </nav>
 </header>
-
 <!--CAROUSEL SLIDER-->
-<section id="slider">
-  Slider here
+<section id="slide" class="slide-home">
+  <div class="item" style="background-image: url('./assets/images/slider-01.jpg')">
+    <div class="slide-caption">
+      <h3>Flower Beauty</h3>
+      <p>Lorem ipsum dolor sit amet, per ea error vituperata. Teusu altera quaestio. Mea ludus salutatus disputando at.</p>
+      <a href="#"><span>View Now</span></a>
+    </div>
+  </div>
+  <div class="item" style="background-image: url('./assets/images/slider-02.jpg')">
+    <div class="slide-caption">
+      <h3>Special Days</h3>
+      <p>Lorem ipsum dolor sit amet, per ea error vituperata. Teusu altera quaestio. Mea ludus salutatus disputando at.</p>
+      <a href="#"><span>View Now</span></a>
+    </div>
+  </div>
+  <div class="item" style="background-image: url('./assets/images/slider-03.jpg')">
+    <div class="slide-caption">
+      <h3>Plant Lover</h3>
+      <p>Lorem ipsum dolor sit amet, per ea error vituperata. Teusu altera quaestio. Mea ludus salutatus disputando at.</p>
+      <a href="#"><span>View Now</span></a>
+    </div>
+  </div>
 </section>
+<!--COLLECTION EVENT-->
+<section id="collection" class="collection">
+  <div class="container-fluid wrapper">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4">
+        <div class="item">
+          <img src="./assets/images/collection-01.jpg" alt="collection">
+          <div class="content">
+            <h3>Mother’s Day Green bouquet</h3>
+            <a href="#">See Whole Collection</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="item">
+          <img src="./assets/images/collection-02.jpg" alt="collection">
+          <div class="content">
+            <h3>Go Green Home gardens</h3>
+            <a href="#">See Whole Collection</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+        <div class="item">
+          <img src="./assets/images/collection-03.jpg" alt="collection">
+          <div class="content">
+            <h3>Cacti love Urban desert</h3>
+            <a href="#">See Whole Collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--CATEGORY FILTER PRODUCT-->
+<section id="product" class="product">
+  <div class="container-fluid wrapper">
+    <!--LINK FILTER PRODUCT-->
+    <ul class="product-filter">
+      <li><a href="#" class="active">All</a></li>
+      <li><a href="#">Organic</a></li>
+      <li><a href="#">Succulents</a></li>
+      <li><a href="#">Decoration</a></li>
+      <li><a href="#">Bouquote</a></li>
+    </ul>
+    <!--PRODUCT SHOW-->
+    <div class="product-content">
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-01.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Blush Peonies</h5>
+          <p>$20.00</p>
+        </div>
+        <span>Bouquote</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-02.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Suri Succulent</h5>
+          <p>$17.00</p>
+        </div>
+        <span>SUCCULENTS</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-03.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Peonies and Roses</h5>
+          <p>$40.00</p>
+        </div>
+        <span>BOUQUOTE</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-04.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Aloe Succulent</h5>
+          <p>$40.00</p>
+        </div>
+        <span>SUCCULENTS</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-05.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Seasonal Favorites</h5>
+          <p>$99.00</p>
+        </div>
+        <span>BOUQUOTE</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-06.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Cacti Succulent</h5>
+          <p>$13.00</p>
+        </div>
+        <span>SUCCULENTS</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-07.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Blush Tulips</h5>
+          <p>$8.00</p>
+        </div>
+        <span>DECORATION</span>
+      </div>
+      <div class="item">
+        <div class="item-image">
+          <img src="./assets/images/product-08.jpg" alt="product">
+          <div class="overlay">
+            <a href="#"><i class="icon ion-md-eye"></i></a>
+            <a href="#"><i class="ion ion-md-basket"></i></a>
+          </div>
+        </div>
+        <div class="item-content">
+          <h5>Succulent Pot</h5>
+          <p>$12.00</p>
+        </div>
+        <span>SUCCULENTS</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
@@ -93,9 +283,15 @@
 <!--script-->
 <!--font-family: 'Poppins', sans-serif; -->
 <!--font-family: 'Montserrat', sans-serif; -->
-<script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="./assets/js/vendor/jquery-3.4.1.min.js"></script>
+<script src="./assets/js/vendor/bootstrap.min.js"></script>
+<!--SLICK CAROUSEL-->
+<script src="./assets/js/vendor/slick.min.js"></script>
+<!--ISOTOP & IMAGE LOADED-->
+<script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+<script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+<!--MAIN JS-->
+<script src="./assets/js/main.js"></script>
 
 </body>
 </html>
