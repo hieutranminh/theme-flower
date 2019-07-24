@@ -21,7 +21,7 @@ $(document).ready(function () {
     $productIsotop = $('.product-content').isotope({
       itemSelector: '.item',
       masonry: {
-        columnWidth: 10
+        columnWidth: 0
       }
     });
     console.log($productIsotop)
