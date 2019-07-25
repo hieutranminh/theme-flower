@@ -4,8 +4,18 @@ $(document).ready(function () {
     $('.slide-home').slick({
       draggable: true,
       arrows: true,
-      prevArrow:'<i class="icon ion-ios-arrow-back prev"></i>',
-      nextArrow:'<i class="icon ion-ios-arrow-forward next"></i>',
+      prevArrow:
+        '<div class="prev">' +
+        '<svg class="i-chevron-left" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">\n' +
+        '<path d="M20 30 L8 16 20 2"></path>\n' +
+        '</svg>' +
+        '</div>',
+      nextArrow:'' +
+        '<div class="next">' +
+        '<svg class="i-chevron-right" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">\n' +
+        '<path d="M12 30 L24 16 12 2"></path>\n' +
+        '</svg>' +
+        '</div>',
       dots: true,
       fade: true,
       speed: 900,
@@ -18,13 +28,19 @@ $(document).ready(function () {
   }
   // isotop mansory on HOME PAGE
   function isotopHomePage () {
-    $productIsotop = $('.product-content').isotope({
-      itemSelector: '.item',
-      masonry: {
-        columnWidth: 0
-      }
-    });
-    console.log($productIsotop)
+    // DOM product content
+    var $productIsotop = $('.product-content');
+    // Layout isotop after each image loads
+    $productIsotop.imagesLoaded().progress(function () {
+      $productIsotop.isotope({
+        itemSelector: '.item',
+        masonry: {
+          // columnWidth: '.item-sizer',
+          gutter: '.item-gutter',
+          horizontalOrder: true
+        }
+      });
+    })
   }
   function init () {
     // Click add class navbar mobile

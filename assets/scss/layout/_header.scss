@@ -138,6 +138,8 @@
         cursor: pointer;
         margin-right: 20px;
         padding-bottom: 1px;
+        @include flex;
+        align-items: center;
         @media #{$info-tablet-pro} {
           font-size: 16px;
           margin: 20px auto 20px;
@@ -201,15 +203,13 @@
     //cart
     &-cart {
       color: #000;
-      @media #{$info-tablet-pro} {
-      }
-      .ion-md-basket {
-        font-size: 20px;
-        padding-right: 6px;
-      }
+      @include flex;
+      align-items: center;
       .cart-box {
         position: relative;
         padding-bottom: 1px;
+        line-height: 1;
+        margin-left: 5px;
         &:before {
           content: "";
           position: absolute;
