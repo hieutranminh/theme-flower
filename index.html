@@ -154,56 +154,67 @@
   <div class="container-fluid wrapper">
     <!--LINK FILTER PRODUCT-->
     <ul class="product-filter">
-      <li><a href="#" class="active">All</a></li>
-      <li><a href="#">Organic</a></li>
-      <li><a href="#">Succulents</a></li>
-      <li><a href="#">Decoration</a></li>
-      <li><a href="#">Bouquote</a></li>
+      <li><a href="#" data-filter="*" class="active">All</a></li>
+      <li><a href="#" data-filter=".organic">Organic</a></li>
+      <li><a href="#" data-filter=".succlents">Succulents</a></li>
+      <li><a href="#" data-filter=".decoration">Decoration</a></li>
+      <li><a href="#" data-filter=".bouquote">Bouquote</a></li>
     </ul>
     <!--PRODUCT SHOW-->
     <div class="product-content">
-      <div class="item-sizer"></div>
+      <!--GUTTER IS MARGIN BETWEEN ITEM-->
       <div class="item-gutter"></div>
-      <div class="item">
+      <!--LOOP ITEM & CLASS FILTER & CLASS DISCOUNT-->
+      <div class="item bouquote discount">
         <div class="item-image">
-          <img src="./assets/images/product-01.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <p class="notify-new">NEW</p>
+          <p class="notify-discount">50%</p>
+          <div class="image-overlay">
+            <img src="./assets/images/product-01.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="item-content">
+        <div class="item-content ">
           <h5><a href="#">Blush Peonies</a></h5>
-          <p>$20.00</p>
+          <div class="price">
+            <p class="percent-deal">$10.00</p>
+            <p class="original-deal">$20.00</p>
+          </div>
         </div>
         <span><a href="#">Bouquote</a></span>
       </div>
-      <div class="item">
+      <div class="item succlents">
         <div class="item-image">
-          <img src="./assets/images/product-02.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <p class="notify-new">NEW</p>
+          <div class="image-overlay">
+            <img src="./assets/images/product-02.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
@@ -212,94 +223,114 @@
         </div>
         <span><a href="#">SUCCULENTS</a></span>
       </div>
-      <div class="item">
+      <div class="item organic">
         <div class="item-image">
-          <img src="./assets/images/product-03.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <p class="notify-new">NEW</p>
+          <div class="image-overlay">
+            <img src="./assets/images/product-03.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
           <h5><a href="#">Peonies and Roses</a></h5>
           <p>$40.00</p>
         </div>
-        <span><a href="#">Bouquote</a></span>
+        <span><a href="#">Organic</a></span>
       </div>
-      <div class="item">
+      <div class="item succlents discount">
         <div class="item-image">
-          <img src="./assets/images/product-04.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <p class="notify-new">NEW</p>
+          <p class="notify-discount">30%</p>
+          <div class="image-overlay">
+            <img src="./assets/images/product-04.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
           <h5><a href="#">Aloe Succulent</a></h5>
-          <p>$40.00</p>
+          <div class="price">
+            <p class="percent-deal">$32.00</p>
+            <p class="original-deal">$40.00</p>
+          </div>
         </div>
         <span><a href="#">SUCCULENTS</a></span>
       </div>
-      <div class="item">
+      <div class="item organic discount">
         <div class="item-image">
-          <img src="./assets/images/product-05.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <p class="notify-new">NEW</p>
+          <p class="notify-discount">15%</p>
+          <div class="image-overlay">
+            <img src="./assets/images/product-05.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
           <h5><a href="#">Seasonal Favorites</a></h5>
-          <p>$99.00</p>
+          <div class="price">
+            <p class="percent-deal">$70.00</p>
+            <p class="original-deal">$99.00</p>
+          </div>
         </div>
-        <span><a href="#">Bouquote</a></span>
+        <span><a href="#">Organic</a></span>
       </div>
-      <div class="item">
+      <div class="item succlents">
         <div class="item-image">
-          <img src="./assets/images/product-06.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <p class="notify-new">NEW</p>
+          <div class="image-overlay">
+            <img src="./assets/images/product-06.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
@@ -308,46 +339,50 @@
         </div>
         <span><a href="#">SUCCULENTS</a></span>
       </div>
-      <div class="item">
+      <div class="item succlents">
         <div class="item-image">
-          <img src="./assets/images/product-07.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <div class="image-overlay">
+            <img src="./assets/images/product-04.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
           <h5><a href="#">Blush Tulips</a></h5>
           <p>$8.00</p>
         </div>
-        <span><a href="#">DECORATION</a></span>
+        <span><a href="#">succlents</a></span>
       </div>
-      <div class="item">
+      <div class="item succlents">
         <div class="item-image">
-          <img src="./assets/images/product-08.jpg" alt="product">
-          <div class="overlay">
-            <a href="#">
-              <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <circle cx="17" cy="15" r="1"></circle>
-                <circle cx="16" cy="16" r="6"></circle>
-                <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
-              </svg>
-            </a>
+          <div class="image-overlay">
+            <img src="./assets/images/product-04.jpg" alt="product">
+            <div class="overlay">
+              <a href="#">
+                <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <circle cx="17" cy="15" r="1"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z"></path>
+                </svg>
+              </a>
+              <a href="#">
+                <svg class="i-bag" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div class="item-content">
@@ -356,6 +391,8 @@
         </div>
         <span><a href="#">SUCCULENTS</a></span>
       </div>
+      <!--NOTIFY-->
+      <h3 class="notify-filter">Not result in category</h3>
     </div>
   </div>
 </section>
@@ -368,6 +405,7 @@
 <!--script-->
 <!--font-family: 'Poppins', sans-serif; -->
 <!--font-family: 'Montserrat', sans-serif; -->
+<!--Green : #006400-->
 <script src="./assets/js/vendor/jquery-3.4.1.min.js"></script>
 <script src="./assets/js/vendor/bootstrap.min.js"></script>
 <!--SLICK CAROUSEL-->
@@ -377,6 +415,7 @@
 <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
 <!--MAIN JS-->
 <script src="./assets/js/main.js"></script>
+<script src="./assets/js/home.js"></script>
 
 </body>
 </html>

@@ -20,3 +20,201 @@ h1, h2, h3, h4, h5 {
 img {
   max-width: 100%;
 }
+
+// Common CSS Product
+.product-content {
+  font-family: 'Montserrat', sans-serif;
+  .item {
+    width: calc((100% - 3*30px)/4);
+    margin-bottom: 4.6rem;
+    @media #{$info-tablet-pro} {
+      width: calc((100% - 2*30px)/3);
+      margin-bottom: 3rem;
+    }
+    @media #{$info-tablet} {
+      width: calc((100% - 30px)/2);
+    }
+    @media #{$info-phone} {
+      width: 100%;
+    }
+    &-gutter {
+      width: 30px;
+    }
+    &-image {
+      position: relative;
+      margin-bottom: 22px;
+      .image-overlay {
+        position: relative;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          @include transition(all 0.4s cubic-bezier(.33,.02,0,.93));
+          @include transform(scale(1.06) translateX(0px));
+        }
+        .overlay {
+          @include flex;
+          background-color: #ffffff;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: 2;
+          opacity: 0;
+          @include transition(all 0.4s cubic-bezier(.33,.02,0,.93));
+          @include transform(translateX(100%));
+          @media #{$info-desktop} {
+            opacity: 1;
+            @include transform(translateX(0%));
+          }
+          a {
+            @include flex;
+            justify-content: center;
+            align-items: center;
+            color: #000000;
+            font-size: 1.2rem;
+            width: 50px;
+            height: 45px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid transparent;
+            @include transition(all .45s);
+            &:hover {
+              border: 1px solid gainsboro;
+            }
+            svg {
+              width: 20px;
+              height: 20px;
+              fill: none;
+              stroke: #000000;
+            }
+          }
+        }
+      }
+      .notify-new {
+        font-family: "Montserrat", sans-serif;
+        position: absolute;
+        top: 15px;
+        left: -10px;
+        z-index: 2;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        width: 60px;
+        text-align: center;
+        padding: 3px 0px;
+        background-color: #006400;
+        color: #ffffff;
+        @include border-radius-separate(0px, 0px, 2px, 0px);
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: -9px;
+          left: 4px;
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left: 7px solid #318231;
+          @include transform(rotate(-45deg));
+        }
+      }
+    }
+    &-content {
+      font-family: 'Poppins', sans-serif;
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+      h5 {
+        font-size: 0.93rem;
+        font-weight: 600;
+        a {
+          display: inline-block;
+          color: #000000;
+          @include transition(0.2s);
+          &:hover {
+            color: #006400;
+          }
+        }
+      }
+      p {
+        font-size: 0.87rem;
+        line-height: 1;
+      }
+    }
+    span {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: .16em;
+      line-height: 21px;
+      a {
+        color: #000000;
+      }
+    }
+    &:hover {
+      .item-image {
+        img {
+          will-change: transform;
+          @include transform(scale(1.06) translateX(-6px));
+        }
+        .overlay {
+          opacity: 1;
+          @include transform(translateX(0%));
+        }
+      }
+    }
+  }
+  .discount {
+    .item-image {
+      .notify-discount {
+        font-family: "Montserrat", sans-serif;
+        position: absolute;
+        bottom: 15px;
+        left: -10px;
+        z-index: 2;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        width: 60px;
+        text-align: center;
+        padding: 3px 0px;
+        background-color: #ff3d3d;
+        color: #ffffff;
+        -webkit-box-shadow: 1px 1px 4px -1px #000000;
+        -moz-box-shadow: 1px 1px 4px -1px #000000;
+        box-shadow: 1px 1px 4px -1px #000000;
+        @include border-radius-separate(2px, 0px, 0px, 0px);
+        &:before {
+          content: '';
+          position: absolute;
+          top: -9px;
+          left: 4px;
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left: 7px solid #e30303;
+          @include transform(rotate(45deg));
+        }
+      }
+    }
+    .item-content {
+      .price {
+        @include flex;
+        .percent-deal {
+          font-weight: 600;
+          color: green;
+        }
+        .original-deal {
+          margin-left: 5px;
+          text-decoration: line-through;
+          color: #afafaf;
+        }
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #006400;
+    display: none;
+  }
+}
