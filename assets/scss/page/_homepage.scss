@@ -1,6 +1,9 @@
 //SLIDER
 .slide-home {
   margin-bottom: 40px!important;
+  @media #{$info-tablet-pro} {
+    margin-top: 58px;
+  }
   .item {
     background-repeat: no-repeat;
     background-size: cover;

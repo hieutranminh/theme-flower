@@ -59,11 +59,13 @@ img {
           bottom: 0;
           right: 0;
           z-index: 2;
+          @include transition(0.2s);
           opacity: 0;
-          @include transition(all 0.4s cubic-bezier(.33,.02,0,.93));
+          visibility: hidden;
           @include transform(translateX(100%));
           @media #{$info-desktop} {
             opacity: 1;
+            visibility: visible;
             @include transform(translateX(0%));
           }
           a {
@@ -153,11 +155,11 @@ img {
     &:hover {
       .item-image {
         img {
-          will-change: transform;
           @include transform(scale(1.06) translateX(-6px));
         }
         .overlay {
           opacity: 1;
+          visibility: visible;
           @include transform(translateX(0%));
         }
       }
@@ -213,8 +215,10 @@ img {
   h3 {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     color: #006400;
     display: none;
   }
 }
+// Modal popup product
+

@@ -2,6 +2,7 @@ $(document).ready(function () {
   // DOM product content
   var $productIsotop = $('.product-content');
   var $notifyNotResult = $('.notify-filter');
+  var arrLinkFilter = $('.product-filter a');
   // slick carousel on HOME PAGE
   function slickHomePage () {
     $('.slide-home').slick({
@@ -46,12 +47,25 @@ $(document).ready(function () {
   function filterProductIsotop () {
     $('.product-filter').on( 'click', 'a', function(e) {
       e.preventDefault();
+      // remove class active old & add class active new
+      resetClassActiveFilter();
+      $(this).addClass('active');
+      // get attribute data-filter & filter
       var filterValue = $(this).attr('data-filter');
       $productIsotop.isotope({ filter: filterValue });
       // check not results filter
       $productIsotop.data('isotope').filteredItems.length === 0 ?
         $notifyNotResult.css("display","block") :
         $notifyNotResult.css("display","none")
+    })
+  }
+  // Reset class active filter link
+  function resetClassActiveFilter () {
+    arrLinkFilter.each(function (index,value) {
+      var linkFilter = $(value);
+      if(linkFilter.hasClass('active')) {
+        linkFilter.removeClass('active')
+      }
     })
   }
   function init () {
