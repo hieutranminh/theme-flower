@@ -5,6 +5,7 @@ $(document).ready(function () {
   var arrLinkFilter = $('.product-filter a');
   // slick carousel on HOME PAGE
   function slickHomePage () {
+    // slide banner
     $('.slide-home').slick({
       draggable: true,
       arrows: true,
@@ -24,10 +25,39 @@ $(document).ready(function () {
       fade: true,
       speed: 900,
       infinite: true,
-      // autoplay:true,
-      // autoplaySpeed:4000,
+      autoplay:true,
+      autoplaySpeed:4000,
       cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
       touchThreshold: 100
+    })
+    // slide logo
+    $('.slide-brand').slick({
+      slidesToShow: 5,
+      infinite: true,
+      arrows: false,
+      dots: false,
+      autoplay:true,
+      autoplaySpeed:2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 577,
+          settings: {
+            slidesToShow: 2,
+          }
+        }
+      ]
     })
   }
   // isotop mansory on HOME PAGE

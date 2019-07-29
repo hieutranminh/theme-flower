@@ -34,6 +34,7 @@
       flex-direction: column;
     }
     .modal-image {
+      position: relative;
       width: 48%;
       @media #{$info-phone} {
         width: 100%;
@@ -41,6 +42,17 @@
       img {
         width: 100%;
         height: 100%;
+      }
+      .notify-new {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 0.8rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 6px 14px;
+        background-color: #006400;
+        color: #ffffff;
       }
     }
     .modal-info {
@@ -58,6 +70,10 @@
         font-weight: 600;
         line-height: 2.8rem;
         margin-bottom: 7px;
+        @media #{$info-phone} {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
       }
       span {
         display: block;
@@ -159,6 +175,32 @@
       background: transparent;
       outline: none;
       padding: 0px;
+    }
+  }
+  //Modal product discount
+  &-discount {
+    .modal-info {
+      .price {
+        @include flex;
+        span {
+          &.percent-deal {
+            color: #008000;
+          }
+          &.original-deal {
+            text-decoration: line-through;
+            color: #afafaf;
+            margin-left: 8px;
+          }
+        }
+      }
+      b {
+        display: inline-block;
+        padding: 2px 14px;
+        background-color: #ff3d3d;
+        color: #ffffff;
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
     }
   }
 }

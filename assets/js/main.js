@@ -1,6 +1,8 @@
 $(document).ready(function () {
   var logoHeader = $('.logo');
   var navbarMain = $('.navbar');
+  var mainPage = $('.main');
+  var footerMain = $('#footer');
   // current offset
   var currentOffset = $(window).scrollTop();
   // click show menu mobile
@@ -11,6 +13,14 @@ $(document).ready(function () {
       $('.navbar-toggler-icon').addClass('active')
     }
   })
+  // get height footer and margin bottom main
+  function mainMarginFooter () {
+    if(window.innerWidth >= 768) {
+      // get height of footer
+      var footerHeight = footerMain.innerHeight();
+      mainPage.css('marginBottom', footerHeight);
+    }
+  }
   // scroll menu fixed
   function onScroll () {
     $(document).on('scroll', function () {
@@ -22,6 +32,7 @@ $(document).ready(function () {
       }
     })
   }
+  // check current offset and add class navbar-fixed
   function checkCurrentOffset () {
     if(currentOffset > logoHeader.innerHeight()) {
       navbarMain.addClass('navbar-fixed');
@@ -29,6 +40,13 @@ $(document).ready(function () {
       navbarMain.removeClass('navbar-fixed');
     }
   }
+  // resize windown
+  $(window).resize(function() {
+    console.log('aa')
+    mainMarginFooter();
+  })
+  // Run function
+  mainMarginFooter();
   onScroll();
   checkCurrentOffset();
 })
