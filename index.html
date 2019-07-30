@@ -76,11 +76,15 @@
       <!--Search & button hambuger information quick view-->
       <div class="navbar-right">
         <div class="search">
-          <svg class="i-search" viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <circle cx="14" cy="14" r="12"></circle>
-            <path d="M23 23 L30 30"></path>
-          </svg>
-          <span>Search</span>
+          <form action="#">
+            <label for="search">
+              <svg class="i-search" viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <circle cx="14" cy="14" r="12"></circle>
+                <path d="M23 23 L30 30"></path>
+              </svg>
+            </label>
+            <input type="text" id="search" class="form-control" placeholder="Search product...">
+          </form>
         </div>
         <div id="btn-quickinfo" class="btn-quickinfo">
           <div class="one"></div>
@@ -393,9 +397,9 @@
           </div>
           <span><a href="#">SUCCULENTS</a></span>
         </div>
-        <!--NOTIFY-->
-        <h3 class="notify-filter">Not result in category</h3>
       </div>
+      <!--NOTIFY-->
+      <h3 class="notify-filter">Not result in category</h3>
     </div>
   </section>
   <!--MODAL POPUP PRODUCT DISCOUNT - LOOP MODAL IF PRODUCT IS DISCOUNT-->
@@ -562,6 +566,8 @@
       </div>
     </div>
   </section>
+  <!--SCROLL TO TOP-->
+  <a href="#" class="backtotop">Back to top</a>
 </section>
 <!--FOOTER-->
 <footer id="footer">

@@ -20,8 +20,49 @@ h1, h2, h3, h4, h5 {
 img {
   max-width: 100%;
 }
-
-// Common CSS Product
+//Main section
+.main {
+  background-color: #ffffff;
+}
+//Button back to top
+.backtotop {
+  position: fixed;
+  bottom: 50px;
+  right: -15px;
+  z-index: 100;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #000000;
+  @include transform(rotate(-90deg));
+  @include transition(0.4s);
+  opacity: 0;
+  visibility: hidden;
+  &.backtotop-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 1px;
+    background-color: #000;
+    transition: transform .4s cubic-bezier(.28,.38,0,.81);
+    width: 100%;
+    @include transform(scaleX(1));
+    @include transform-origin((0 0));
+  }
+  &:hover{
+    color: #000000;
+    &:before {
+      @include transform(scaleX(0));
+      @include transform-origin((100% 0%));
+    }
+  }
+}
+//Common CSS Product
 .product-content {
   font-family: 'Montserrat', sans-serif;
   .item {
@@ -212,13 +253,5 @@ img {
       }
     }
   }
-  h3 {
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 50px;
-    color: #006400;
-    display: none;
-  }
 }
-// Modal popup product
 
