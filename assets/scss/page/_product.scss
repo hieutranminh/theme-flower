@@ -1,0 +1,49 @@
+.product-main {
+  .sidebar {}
+  .total-and-sort {
+    font-family: 'Montserrat', sans-serif;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    color: #000000;
+    p {
+      font-size: 12px;
+      font-weight: 400;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .form-group {
+      position: relative;
+      margin-bottom: 0px;
+      width: 190px;
+      label {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        line-height: 0px;
+        margin-top: -6px;
+        &:focus {
+          & > select {
+
+          }
+        }
+      }
+      .form-control {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        box-shadow: none;
+        padding: 0px;
+        height: 25px;
+        font-size: 12px;
+        text-transform: uppercase;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        color: #000000;
+        border: none;
+      }
+    }
+  }
+}
