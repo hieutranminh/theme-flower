@@ -24,17 +24,15 @@
         top: 50%;
         line-height: 0px;
         margin-top: -6px;
-        &:focus {
-          & > select {
-
-          }
-        }
+        z-index: 0;
       }
       .form-control {
+        position: relative;
         -webkit-appearance: none;
         -moz-appearance: none;
         outline: none;
         box-shadow: none;
+        background: transparent;
         padding: 0px;
         height: 25px;
         font-size: 12px;
@@ -45,5 +43,8 @@
         border: none;
       }
     }
+  }
+  .item {
+    margin-bottom: 50px;
   }
 }

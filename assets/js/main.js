@@ -68,7 +68,7 @@ $(document).ready(function () {
         headerNavbar.removeClass('navbar-fixed')
       }
       // Add class backtotop-open when scroll > position product
-      if (currentOffset > sectionProduct.offset().top - 100) {
+      if (currentOffset > sectionMain.innerHeight() / 2) {
         buttonBackToTop.addClass('backtotop-open')
       } else {
         buttonBackToTop.removeClass('backtotop-open')
