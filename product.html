@@ -210,13 +210,74 @@
   <!--MAIN PRODUCT-->
   <section class="product-main product-content">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
+      <div class="row flex-column-reverse flex-md-row">
+        <!--SIDEBAR-->
+        <div class="col-12 col-md-3">
           <div class="sidebar">
-            a
+            <!--Category-->
+            <div class="sidebar-item sidebar-category">
+              <h4>Categories</h4>
+              <ul>
+                <li><a href="#">All <span>(100)</span></a></li>
+                <li><a href="#">Organic <span>(6)</span></a></li>
+                <li><a href="#">Bouquote <span>(4)</span></a></li>
+                <li><a href="#">Succulents <span>(10)</span></a></li>
+                <li><a href="#">Decoration <span>(15)</span></a></li>
+                <li><a href="#">Gift <span>(10)</span></a></li>
+                <li><a href="#">Events <span>(10)</span></a></li>
+                <li><a href="#">Festival <span>(15)</span></a></li>
+              </ul>
+            </div>
+            <!--Category Color-->
+            <div class="sidebar-item sidebar-color">
+              <h4>Colors</h4>
+              <ul>
+                <li><a href="#">Yellow <span>(2)</span></a></li>
+                <li><a href="#">White <span>(4)</span></a></li>
+                <li><a href="#">Red <span>(6)</span></a></li>
+                <li><a href="#">Orange <span>(8)</span></a></li>
+                <li><a href="#">Blue <span>(10)</span></a></li>
+                <li><a href="#">Pink <span>(12)</span></a></li>
+              </ul>
+            </div>
+            <!--Category Color-->
+            <div class="sidebar-item sidebar-price">
+              <h4>Price</h4>
+              <ul>
+                <li><a href="#">0 - 500.000đ</a></li>
+                <li><a href="#">500.000đ - 1.000.000đ</a></li>
+                <li><a href="#">1.000.000đ - 1.500.000đ</a></li>
+                <li><a href="#">1.500.000đ - 2.000.000đ</a></li>
+              </ul>
+            </div>
+            <!--Input search-->
+            <div class="sidebar-item sidebar-form sidebar-search">
+              <input type="text" id="search-product" class="form-control" placeholder="SEARCH">
+              <label for="search-product">
+                <svg class="i-mail" viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                  <circle cx="14" cy="14" r="12"></circle>
+                  <path d="M23 23 L30 30"></path>
+                </svg>
+              </label>
+            </div>
+            <!--Category tags-->
+            <div class="sidebar-tag">
+              <h4>Tags</h4>
+              <ul>
+                <li><a href="#">Flower, </a></li>
+                <li><a href="#">Decoration, </a></li>
+                <li><a href="#">Rose, </a></li>
+                <li><a href="#">New, </a></li>
+                <li><a href="#">Trend, </a></li>
+                <li><a href="#">Tulips, </a></li>
+                <li><a href="#">Yellow, </a></li>
+                <li><a href="#">Saleoff</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-lg-9">
+        <!--PRODUCT & PAGINATION-->
+        <div class="col-12 col-md-9">
           <!--Total page & sort product-->
           <div class="total-and-sort">
             <p>SHOWING 1–15 OF 182 RESULTS</p>
@@ -238,13 +299,14 @@
           </div>
           <!--Content-->
           <div class="row">
-            <div class="col-lg-4">
+            <!--Loop product-->
+            <div class="col-sm-6 col-xl-4">
               <div class="item bouquote discount">
                 <div class="item-image">
                   <p class="notify-new">NEW</p>
                   <p class="notify-discount">50%</p>
                   <div class="image-overlay">
-                    <img src="./assets/images/product-01.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-01.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#" data-toggle="modal" data-target="#product-01">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -273,12 +335,12 @@
                 <span><a href="#">Bouquote</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item succlents">
                 <div class="item-image">
                   <p class="notify-new">NEW</p>
                   <div class="image-overlay">
-                    <img src="./assets/images/product-02.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-02.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#" data-toggle="modal" data-target="#product-02">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -304,12 +366,12 @@
                 <span><a href="#">SUCCULENTS</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item organic">
                 <div class="item-image">
                   <p class="notify-new">NEW</p>
                   <div class="image-overlay">
-                    <img src="./assets/images/product-03.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-03.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -335,13 +397,13 @@
                 <span><a href="#">Organic</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item succlents discount">
                 <div class="item-image">
                   <p class="notify-new">NEW</p>
                   <p class="notify-discount">30%</p>
                   <div class="image-overlay">
-                    <img src="./assets/images/product-04.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-04.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -370,13 +432,13 @@
                 <span><a href="#">SUCCULENTS</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item organic discount">
                 <div class="item-image">
                   <p class="notify-new">NEW</p>
                   <p class="notify-discount">15%</p>
                   <div class="image-overlay">
-                    <img src="./assets/images/product-05.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-05.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -405,12 +467,12 @@
                 <span><a href="#">Organic</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item succlents">
                 <div class="item-image">
                   <p class="notify-new">NEW</p>
                   <div class="image-overlay">
-                    <img src="./assets/images/product-06.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-06.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -436,11 +498,11 @@
                 <span><a href="#">SUCCULENTS</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item succlents">
                 <div class="item-image">
                   <div class="image-overlay">
-                    <img src="./assets/images/product-07.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-07.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -466,11 +528,11 @@
                 <span><a href="#">succlents</a></span>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-sm-6 col-xl-4">
               <div class="item succlents">
                 <div class="item-image">
                   <div class="image-overlay">
-                    <img src="./assets/images/product-08.jpg" alt="product">
+                    <a href="product-detail.html"><img src="./assets/images/product-08.jpg" alt="product"></a>
                     <div class="overlay">
                       <a href="#">
                         <svg class="i-eye" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round"
@@ -511,6 +573,142 @@
       </div>
     </div>
   </section>
+  <!--MODAL POPUP PRODUCT DISCOUNT - LOOP MODAL IF PRODUCT IS DISCOUNT-->
+  <div class="modal fade modal-product modal-product-discount" id="product-01">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-image">
+          <img src="./assets/images/product-01.jpg" alt="flower">
+          <p class="notify-new">NEW</p>
+        </div>
+        <div class="modal-info">
+          <h3>Blush Peonies</h3>
+          <b>50%</b>
+          <div class="price">
+            <span class="percent-deal">$10.00</span>
+            <span class="original-deal">$20.00</span>
+          </div>
+          <ul>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+          </ul>
+          <p>Lorem proin gravida nibh enean sonauris hime sollicitudin enean , lom himenaeos lorem ean consertquat estruda cono pero.</p>
+          <div class="amount-vertical">
+            <div class="amount">
+              <input type="text" maxlength="2" name="quantity" class="quantity" value="1"/>
+              <div class="amount-action">
+                <button class="btn-increase">
+                  <svg class="i-chevron-top" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M30 20 L16 8 2 20"></path>
+                  </svg>
+                </button>
+                <button class="btn-decrease">
+                  <svg class="i-chevron-bottom" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M30 12 L16 24 2 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <a href="#">Add To Cart</a>
+          </div>
+        </div>
+        <button class="close-modal" data-dismiss="modal">
+          <svg class="i-close" viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--MODAL POPUP PRODUCT - LOOP MODAL NORMAL-->
+  <div class="modal fade modal-product" id="product-02">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-image">
+          <img src="./assets/images/product-02.jpg" alt="flower">
+          <p class="notify-new">NEW</p>
+        </div>
+        <div class="modal-info">
+          <h3>Suri Succulent</h3>
+          <span>$17.00</span>
+          <ul>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+            <li>
+              <svg class="i-star" viewBox="0 0 32 32" fill="#000000" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+              </svg>
+            </li>
+          </ul>
+          <p>Lorem proin gravida nibh enean sonauris hime sollicitudin enean , lom himenaeos lorem ean consertquat estruda cono pero.</p>
+          <div class="amount-vertical">
+            <div class="amount">
+              <input type="text" maxlength="2" name="quantity" class="quantity" value="1"/>
+              <div class="amount-action">
+                <button class="btn-increase">
+                  <svg class="i-chevron-top" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M30 20 L16 8 2 20"></path>
+                  </svg>
+                </button>
+                <button class="btn-decrease">
+                  <svg class="i-chevron-bottom" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M30 12 L16 24 2 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <a href="#">Add To Cart</a>
+          </div>
+        </div>
+        <button class="close-modal" data-dismiss="modal">
+          <svg class="i-close" viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M2 30 L30 2 M30 30 L2 2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
   <!--BUTTON SCROLL BACK TO TOP-->
   <a href="#" class="backtotop">Back to top</a>
 </section>

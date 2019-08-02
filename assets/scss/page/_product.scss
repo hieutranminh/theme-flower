@@ -1,5 +1,4 @@
 .product-main {
-  .sidebar {}
   .total-and-sort {
     font-family: 'Montserrat', sans-serif;
     @include flex;
@@ -7,6 +6,9 @@
     align-items: center;
     margin-bottom: 16px;
     color: #000000;
+    @media #{$info-phone} {
+      flex-direction: column;
+    }
     p {
       font-size: 12px;
       font-weight: 400;
@@ -17,7 +19,11 @@
     .form-group {
       position: relative;
       margin-bottom: 0px;
-      width: 190px;
+      width: 250px;
+      @media #{$info-phone} {
+        border-bottom: 2px solid #cccccc;
+        margin: 10px 0px;
+      }
       label {
         position: absolute;
         right: 10px;
@@ -25,6 +31,9 @@
         line-height: 0px;
         margin-top: -6px;
         z-index: 0;
+        @media #{$info-phone} {
+          right: 0px;
+        }
       }
       .form-control {
         position: relative;
@@ -48,3 +57,4 @@
     margin-bottom: 50px;
   }
 }
+
