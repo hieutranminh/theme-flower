@@ -1,0 +1,46 @@
+.cart {
+  font-family: 'Poppins', sans-serif;
+  h3 {
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 1.56rem;
+    color: #000000;
+  }
+  &-content {
+    .item {
+      @include flex;
+      align-items: center;
+      &-image {
+        width: 20%;
+        img {
+
+        }
+      }
+      &-content {
+        width: 50%;
+        margin-left: 20px;
+        a {
+          display: block;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #000000;
+        }
+        span {
+          font-size: 0.87rem;
+          font-weight: 400;
+        }
+      }
+      &-quantity {
+        width: 20%;
+      }
+      .btn-remove {
+        width: 10%;
+        text-align: right;
+      }
+    }
+  }
+  &-totals {
+
+  }
+}

@@ -1,0 +1,281 @@
+.product-detail {
+  margin-bottom: 55px;
+  &-image {
+    @include flex;
+    height: 650px;
+    @media #{$info-tablet-pro} {
+      height: 480px;
+    }
+
+    .other-image {
+      width: 20%;
+      height: 100%;
+      overflow: auto;
+      .item {
+        height: calc((100% - 4*10px )/5);
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: 3px solid #e7e7e7;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+        &:focus {
+          border: 3px solid #008000;
+          outline: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .main-image {
+      width: 80%;
+      padding-left: 10px;
+      .item {
+        height: 100%;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &-info {
+    font-family: 'Poppins', sans-serif;
+    @media #{$info-tablet} {
+      margin: 50px 0px;
+    }
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 2.8rem;
+      margin-bottom: 7px;
+      @media #{$info-tablet-pro} {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+      @media #{$info-phone} {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 1.12rem;
+      margin-bottom: 5px;
+    }
+    ul {
+      margin-bottom: 48px;
+      @media #{$info-tablet-pro} {
+        margin-bottom: 20px;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+    }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      line-height: 1.62rem;
+      color: #2d2d2d;
+      margin-bottom: 50px;
+      @media #{$info-tablet-pro} {
+        margin-bottom: 20px;
+      }
+    }
+    .amount-vertical {
+      @include flex;
+      align-items: stretch;
+      height: 50px;
+      margin-bottom: 45px;
+      @media #{$info-tablet-pro} {
+        margin-bottom: 25px;
+      }
+      .amount {
+        @include inline-flex;
+        .quantity {
+          font-family: 'Poppins', sans-serif;
+          font-size: 13px;
+          font-weight: 600;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          border: 1px solid #808080;
+          @include border-radius(inherit);
+          outline: none;
+        }
+        &-action {
+          @include flex;
+          flex-direction: column;
+          border: 1px solid #808080;
+          border-left: none;
+          button {
+            @include flex;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: transparent;
+            outline: none;
+            border: none;
+            padding: 0;
+          }
+          .btn-increase {
+            border-bottom: 1px solid #808080;
+          }
+        }
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        color: #ffffff;
+        background: #000000;
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin-left: 20px;
+        height: 50px;
+        line-height: 50px;
+        width: 120px;
+        text-align: center;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          height: 1px;
+          background-color: #000;
+          transition: transform .4s cubic-bezier(.28,.38,0,.81);
+          width: 100%;
+          @include transform(scaleX(1));
+          @include transform-origin((0 0));
+        }
+        &:hover{
+          &:before {
+            @include transform(scaleX(0));
+            @include transform-origin((100% 0%));
+          }
+        }
+      }
+    }
+    .meta {
+      font-family: 'Montserrat', sans-serif;
+      .item {
+        margin-bottom: 4px;
+        span {
+          display: inline-block;
+          color: #3d3d3d;
+          font-size: 12px;
+          line-height: unset;
+          margin: 0px;
+          font-weight: unset;
+          letter-spacing: 2px;
+        }
+        ul {
+          display: inline-block;
+          margin: 0px;
+          li {
+            a {
+              font-size: 12px;
+              color: #000000;
+              letter-spacing: 2px;
+              &:hover {
+                color: #006400;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-discount {
+    .price {
+      @include flex;
+      span {
+        &.percent-deal {
+          color: #008000;
+        }
+        &.original-deal {
+          text-decoration: line-through;
+          color: #afafaf;
+          margin-left: 8px;
+        }
+      }
+    }
+    b {
+      display: inline-block;
+      padding: 2px 14px;
+      background-color: #ff3d3d;
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+  }
+}
+//navtab detail
+.navtab-detail {
+  margin-bottom: 65px;
+  .nav-pills {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 1px;
+      background: #c4c4c4;
+      z-index: 0;
+    }
+    li {
+      a {
+        position: relative;
+        padding: 8px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #000000;
+        @include border-radius(inherit);
+        &.active {
+          background: transparent;
+          color: #000000;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0px;
+            background-color: #000000;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    font-family: 'Montserrat', sans-serif;
+    .tab-pane {
+      font-size: 15px;
+      line-height: 26px;
+      color: #000000;
+    }
+  }
+}
+//related product
+.product-related {
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.56rem;
+    margin-bottom: 50px;
+  }
+  .item {
+    margin-bottom: 50px;
+  }
+}
