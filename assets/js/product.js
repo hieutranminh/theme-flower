@@ -11,8 +11,6 @@ $(document).ready(function () {
       // convert value string > value number
       var quantityProduct = parseInt(inputQuantity.val());
       quantityProduct++;
-      // convert value number > value string
-      quantityProduct = quantityProduct.toString();
       inputQuantity.val(quantityProduct);
     })
   }
@@ -28,8 +26,6 @@ $(document).ready(function () {
       }else {
         quantityProduct--;
       }
-      // convert value number > value string
-      quantityProduct = quantityProduct.toString();
       inputQuantity.val(quantityProduct);
     })
   }

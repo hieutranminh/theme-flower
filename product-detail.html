@@ -16,6 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <!--bootstrap-->
   <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
+  <!--fancybox image-->
+  <link rel="stylesheet" href="./assets/css/vendor/jquery.fancybox.min.css">
   <!--google fonts-->
   <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500,600,700&display=swap&subset=vietnamese"
@@ -215,21 +217,21 @@
         <div class="col-md-7">
           <div class="product-detail-image">
             <div class="other-image">
-              <div class="item" tabindex="1">
+              <a href="./assets/images/product-01.jpg" data-fancybox="gallery" class="item" tabindex="1">
                 <img src="./assets/images/product-01.jpg" alt="other">
-              </div>
-              <div class="item" tabindex="1">
+              </a>
+              <a href="./assets/images/product-02.jpg" data-fancybox="gallery" class="item" tabindex="1">
                 <img src="./assets/images/product-02.jpg" alt="other">
-              </div>
-              <div class="item" tabindex="1">
+              </a>
+              <a href="./assets/images/product-03.jpg" data-fancybox="gallery" class="item" tabindex="1">
                 <img src="./assets/images/product-03.jpg" alt="other">
-              </div>
-              <div class="item" tabindex="1">
+              </a>
+              <a href="./assets/images/product-04.jpg" data-fancybox="gallery" class="item" tabindex="1">
                 <img src="./assets/images/product-04.jpg" alt="other">
-              </div>
-              <div class="item" tabindex="1">
+              </a>
+              <a href="./assets/images/product-05.jpg" data-fancybox="gallery" class="item" tabindex="1">
                 <img src="./assets/images/product-05.jpg" alt="other">
-              </div>
+              </a>
             </div>
             <div class="main-image" >
               <div class="item">
@@ -820,9 +822,11 @@
 <!--Green : #006400-->
 <script src="./assets/js/vendor/jquery-3.4.1.min.js"></script>
 <script src="./assets/js/vendor/bootstrap.min.js"></script>
+<script src="./assets/js/vendor/jquery.fancybox.min.js"></script>
 <!--MAIN JS-->
 <script src="./assets/js/common.js"></script>
 <script src="./assets/js/product.js"></script>
+<script src="./assets/js/product-detail.js"></script>
 </body>
 </html>
 

@@ -12,15 +12,18 @@
       height: 100%;
       overflow: auto;
       .item {
+        display: block;
         height: calc((100% - 4*10px )/5);
         margin-bottom: 10px;
         cursor: pointer;
         border: 3px solid #e7e7e7;
+        &.active {
+          border: 3px solid #006400;
+        }
         &:last-child {
           margin-bottom: 0px;
         }
         &:focus {
-          border: 3px solid #008000;
           outline: none;
         }
         img {
@@ -276,6 +279,9 @@
     margin-bottom: 50px;
   }
   .item {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    @media #{$info-tablet-pro} {
+      margin-bottom: 50px;
+    }
   }
 }
